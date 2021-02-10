@@ -1,5 +1,8 @@
 # Customize Windows Terminal
 
+- Get started: [Install and set up Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started)
+- Install from the Microsoft Store: [Terminal in Microsoft Store](https://aka.ms/terminal)
+
 ![PowerShell](Screenshot_ps.png)
 
 - Better to install the new PowerShell: https://docs.microsoft.com/en-us/powershell/
@@ -68,7 +71,7 @@
     - Placing the icon image ubuntu.ico or ubuntu.png in the folder located at
     %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
     - you can display the icon by adding this line to the profile in your settings.json:
-    
+
     ```
     "icon": "ms-appdata:///roaming/ubuntu.ico"
     or
