@@ -1,6 +1,6 @@
 # Customize Windows Terminal
 
-![PowerShell](Screenshot_ps.jpg)
+![PowerShell](Screenshot_ps.png)
 
 - Better to install the new PowerShell: https://docs.microsoft.com/en-us/powershell/
 - You can do it via Microsoft Store: https://www.microsoft.com/store/apps/9MZ1SNWT0N5D
@@ -31,7 +31,7 @@
 
 ## Customize command prompt
 
-![Kali-Linux](Screenshot_kali.jpg)
+![Kali-Linux](Screenshot_kali.png)
 
 - Add Cascadia font to Terminal profiles in "settings.json":
 "fontFace": "Cascadia Code PL"
