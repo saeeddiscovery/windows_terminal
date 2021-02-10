@@ -1,5 +1,7 @@
 # Customize Windows Terminal
 
+![PowerShell](Screenshot_ps.jpg)
+
 - Better to install the new PowerShell: https://docs.microsoft.com/en-us/powershell/
 - You can do it via Microsoft Store: https://www.microsoft.com/store/apps/9MZ1SNWT0N5D
 
@@ -29,6 +31,8 @@
 
 ## Customize command prompt
 
+![Kali-Linux](Screenshot_kali.jpg)
+
 - Add Cascadia font to Terminal profiles in "settings.json":
 "fontFace": "Cascadia Code PL"
 
@@ -43,9 +47,9 @@
 
 - Create PowerShell profile if not exists:
     - for "PowerShell":
-    C:\Users\[UserName]\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+    %HOMEPATH%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
     - for "Windows PowerShell":
-    C:\Users\[UserName]\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+    %HOMEPATH%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 - Put these lines in profile and save it:
     ```
@@ -56,3 +60,13 @@
 
 > Change Set-Theme parameter to your desired theme's name
     Theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
+
+-------------------------
+## Tab icons
+
+- Example: Placing the icon image ubuntu.ico or ubuntu.png in the folder located at
+    %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
+    you can display the icon by adding this line to the profile in your settings.json:
+    ``` "icon": "ms-appdata:///roaming/ubuntu.ico" ```
+    or
+    ``` "icon": "ms-appdata:///roaming/ubuntu.png" ```
