@@ -11,7 +11,8 @@
 -------------------------
 
 ## Keyboard shortcuts
-- Keyboard shortcuts are listed in "defaults.json" (in Terminal: Alt + Click on Setting)
+- Keyboard shortcuts are listed in "defaults.json" (in Terminal:  hold <kbd>Alt</kbd> and click on Settings)
+- They are also listed in the command pallete: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
 
 -------------------------
 
