@@ -64,9 +64,13 @@
 -------------------------
 ## Tab icons
 
-- Example: Placing the icon image ubuntu.ico or ubuntu.png in the folder located at
+- Example:
+    - Placing the icon image ubuntu.ico or ubuntu.png in the folder located at
     %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
-    you can display the icon by adding this line to the profile in your settings.json:
-    ``` "icon": "ms-appdata:///roaming/ubuntu.ico" ```
+    - you can display the icon by adding this line to the profile in your settings.json:
+    
+    ```
+    "icon": "ms-appdata:///roaming/ubuntu.ico"
     or
-    ``` "icon": "ms-appdata:///roaming/ubuntu.png" ```
+    "icon": "ms-appdata:///roaming/ubuntu.png"
+    ```
