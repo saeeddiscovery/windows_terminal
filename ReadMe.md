@@ -78,3 +78,10 @@
     or
     "icon": "ms-appdata:///roaming/ubuntu.png"
     ```
+
+-------------------------
+## Remove PowerShell welcome message
+
+- Add the following line to the profile:
+- For PowerShell: ``` "commandline": "pwsh.exe /nologo" ```
+- For Windows PowerShell: ``` "commandline": "powershell.exe /nologo" ```
