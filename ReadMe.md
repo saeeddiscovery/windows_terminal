@@ -46,7 +46,7 @@
     > Install-Module oh-my-posh -Scope CurrentUser
     ```
 
-> For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
+> - For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
     ``` > Set-ExecutionPolicy RemoteSigned ```
 
 - Create PowerShell profile if not exists:
@@ -62,16 +62,16 @@
     Set-Theme Zash
     ```
 
-> Change Set-Theme parameter to your desired theme's name
+> - Change Set-Theme parameter to your desired theme's name
     Theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
 
 -------------------------
 ## Tab icons
 
 - Example:
-    - Placing the icon image ubuntu.ico or ubuntu.png in the folder located at
-    %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
-    - you can display the icon by adding this line to the profile in your settings.json:
+    - Place the icon image "ubuntu.ico" or "ubuntu.png" in the folder located at
+    ``` %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState ```
+    - you can display the icon by adding this line to the ubuntu profile in the settings.json:
 
     ```
     "icon": "ms-appdata:///roaming/ubuntu.ico"
