@@ -85,3 +85,13 @@
 - Add the following line to the profile:
 - For PowerShell: ``` "commandline": "pwsh.exe /nologo" ```
 - For Windows PowerShell: ``` "commandline": "powershell.exe /nologo" ```
+
+-------------------------
+## Show Anaconda environments
+
+- To show the conda env name in the prompt, change the "commandline" section to execute the conda script at PowerShel startup
+- Example for miniconda:
+```
+"commandline": "pwsh.exe /nologo -NoExit -Command \"& 'C:\\Users\\%USERNAME%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\%USERNAME%\\miniconda3' \""
+```
+> Note that not all the oh-my-posh themes support this! I use Honukai theme ( ``` Set-Theme Honukai ``` in the $PROFILE file), that supports it .
