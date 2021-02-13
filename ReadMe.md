@@ -94,4 +94,5 @@
 ```
 "commandline": "pwsh.exe /nologo -NoExit -Command \"& 'C:\\Users\\%USERNAME%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\%USERNAME%\\miniconda3' \""
 ```
+![PowerShell](Screenshot_conda.png)
 > Note that not all the oh-my-posh themes support this! I use Honukai theme ( ``` Set-Theme Honukai ``` in the $PROFILE file), that supports it .
