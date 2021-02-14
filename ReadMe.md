@@ -21,11 +21,48 @@
 
 ### * Additional Themes
 - There are good themes in https://windowsterminalthemes.dev/
-- Add your theme's code to the "Schemes" part of the Terminal "settings.json" (normal settings of Terminal)
-- Use the name of the desired theme at desired profile:
-    ``` "colorScheme": "Horizon" ```
+- Add your theme's code to the "Schemes" part of the Terminal "settings.json" (i.e. normal settings of the Terminal). Example:
+    ```
+    // Add custom color schemes to this array.
+    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+    "schemes": [
+        {
+            "name": "Horizon",
+            "black": "#0a0a0d",
+            "red": "#E95678",
+            "green": "#29D398",
+            "yellow": "#FAB795",
+            "blue": "#26BBD9",
+            "purple": "#EE64AC",
+            "cyan": "#59E1E3",
+            "white": "#e5e5e5",
+            "brightBlack": "#848484",
+            "brightRed": "#EC6A88",
+            "brightGreen": "#3FDAA4",
+            "brightYellow": "#FBC3A7",
+            "brightBlue": "#3FC4DE",
+            "brightPurple": "#F075B5",
+            "brightCyan": "#6BE4E6",
+            "brightWhite": "#e5e5e5",
+            "background": "#1c1e26",
+            "foreground": "#bdc0c2"
+        }
+    ],
+    ```
+- Use the name of the desired theme at desired profile. Example: ``` "colorScheme" : "Horizon" ```
+    ```
+    {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore",
+        "commandline": "pwsh.exe /nologo",
+        "colorScheme" : "Horizon",
+        "startingDirectory": "."
+    },
+    ```
 
 > **Using Acrylic**
+    You can add these parameters to the desired profile to have an acrylic (i.e. semi-transparent) look:
     ```
     "useAcrylic": true,
     "acrylicOpacity": 0.7
@@ -37,37 +74,38 @@
 
 ![Kali-Linux](Screenshot_kali.png)
 
-- Add <a href="CascadiaCodePL.ttf">Cascadia Code PL</a> font to Terminal profiles in "settings.json":
+
+1. Add <a href="CascadiaCodePL.ttf">Cascadia Code PL</a> font to Terminal profiles in "settings.json":
 "fontFace": "Cascadia Code PL"
 
-- Install posh and oh-my-posh from Powershell (should be done in both "PowerShell" & "Windows PowerShell"):
+2. Install posh and oh-my-posh from Powershell (should be done in both "PowerShell" & "Windows PowerShell"):
     ```
     > Install-Module posh-git -Scope CurrentUser
     > Install-Module oh-my-posh -Scope CurrentUser
     ```
 
-> - For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
-    ``` > Set-ExecutionPolicy RemoteSigned ```
+    > For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
+        ``` > Set-ExecutionPolicy RemoteSigned ```
 
-- Create PowerShell profile if not exists (in both "PowerShell" and "Windows PowerShell"):
+3. Create PowerShell profile if not exists (in both "PowerShell" and "Windows PowerShell"):
     ```
     if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
     ```
-- Open the profile with an editor (e.g. notepad)
+4. Open the profile with an editor (e.g. notepad)
     ```
     notepad $PROFILE
     ```
 
-- Put these lines in profile and save it:
+5. Put these lines in profile and save it:
     ```
     Import-Module posh-git
     Import-Module oh-my-posh
     Set-Theme Honukai
     ```
 
-- Restart the shell
+6. Restart the shell
 
-> - Change Set-Theme parameter to your desired theme's name
+> Change Set-Theme parameter to your desired theme's name
     - Some of theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
     - You can get all theme names by this command: ``` Set-Theme x ```
 
@@ -80,11 +118,11 @@
     ``` %LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState ```
     - you can display the icon by adding this line to the ubuntu profile in the settings.json:
 
-    ```
-    "icon": "ms-appdata:///roaming/ubuntu.ico"
-    or
-    "icon": "ms-appdata:///roaming/ubuntu.png"
-    ```
+        ```
+        "icon": "ms-appdata:///roaming/ubuntu.ico"
+        or
+        "icon": "ms-appdata:///roaming/ubuntu.png"
+        ```
 
 -------------------------
 ## Remove PowerShell welcome message
@@ -98,8 +136,14 @@
 
 - To show the conda env name in the prompt, change the "commandline" section to execute the conda script at PowerShel startup
 - Example for miniconda:
-```
-"commandline": "pwsh.exe /nologo -NoExit -Command \"& 'C:\\Users\\%USERNAME%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\%USERNAME%\\miniconda3' \""
-```
-![PowerShell](Screenshot_conda.png)
-> Note that not all the oh-my-posh themes support this! I use Honukai theme ( ``` Set-Theme Honukai ``` in the $PROFILE file), that supports it .
+    - PowerShell:
+    ```
+    "commandline": "pwsh.exe /nologo -NoExit -Command \"& 'C:\\Users\\%USERNAME%\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Users\\%USERNAME%\\miniconda3' \""
+    ```
+    - Windows PowerShell
+    ```
+    "commandline": "powershell.exe /nologo -NoExit -Command \"& 'C:\\Python\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Python\\miniconda3' \"",
+    ```
+
+    ![PowerShell](Screenshot_conda.png)
+    > Note that not all the oh-my-posh themes support this! change themes and see which ones show the env name.
