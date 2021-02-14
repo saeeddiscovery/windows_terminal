@@ -63,7 +63,9 @@
     ```
 
 > - Change Set-Theme parameter to your desired theme's name
-    Theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
+    - Some of theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
+    - You can get all theme names by this command: ``` Set-Theme x ```
+
 
 -------------------------
 ## Tab icons
