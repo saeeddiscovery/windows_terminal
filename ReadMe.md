@@ -37,7 +37,7 @@
 
 ![Kali-Linux](Screenshot_kali.png)
 
-- Add Cascadia font to Terminal profiles in "settings.json":
+- Add <a href="CascadiaCodePL.ttf">Cascadia Code PL</a> font to Terminal profiles in "settings.json":
 "fontFace": "Cascadia Code PL"
 
 - Install posh and oh-my-posh from Powershell (should be done in both "PowerShell" & "Windows PowerShell"):
