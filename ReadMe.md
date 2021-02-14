@@ -49,18 +49,23 @@
 > - For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
     ``` > Set-ExecutionPolicy RemoteSigned ```
 
-- Create PowerShell profile if not exists:
-    - for "PowerShell":
-    %HOMEPATH%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-    - for "Windows PowerShell":
-    %HOMEPATH%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+- Create PowerShell profile if not exists (in both "PowerShell" and "Windows PowerShell"):
+    ```
+    if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+    ```
+- Open the profile with an editor (e.g. notepad)
+    ```
+    notepad $PROFILE
+    ```
 
 - Put these lines in profile and save it:
     ```
     Import-Module posh-git
     Import-Module oh-my-posh
-    Set-Theme Zash
+    Set-Theme Honukai
     ```
+
+- Restart the shell
 
 > - Change Set-Theme parameter to your desired theme's name
     - Some of theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
