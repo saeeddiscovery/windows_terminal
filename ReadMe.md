@@ -120,8 +120,9 @@
         $ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
         $ThemeSettings.PromptSymbols.VirtualEnvSymbol = [char]::ConvertFromUtf32(0x039E)
         ```
-    
-    > You can get the character codes (e.g. 0xE0A0) from Character Map of the selected font (Here we used <a href="CascadiaCodePL.ttf">Cascadia Code PL</a>)
+
+    > - You can get the character codes (e.g. 0xE0A0) from Character Map of the selected font (Here we used <a href="CascadiaCodePL.ttf">Cascadia Code PL</a>)
+    > - You should put these lines in the $PROFILE to make it permanent
 
     Here is an example with the above prompt symbols and the following settings:
         ```
