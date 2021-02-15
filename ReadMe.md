@@ -107,8 +107,30 @@
 
 > Change Set-Theme parameter to your desired theme's name
     - Some of theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
-    - You can get all theme names by this command: ``` Set-Theme x ```
+    - You can get all theme names by this command: ```Set-Theme x```
 
+-----
+
+- **Change Prompt Symbols**
+
+    - You can get Theme parameters by "$ThemeSettings" command.
+    - Prompt symbols can be viewed/changed in "PromptSymbols" and "GitSymbols"  
+    - Examples:
+        ```
+        $ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
+        $ThemeSettings.PromptSymbols.VirtualEnvSymbol = [char]::ConvertFromUtf32(0x039E)
+        ```
+    
+    > You can get the character codes (e.g. 0xE0A0) from Character Map of the selected font (Here we used <a href="CascadiaCodePL.ttf">Cascadia Code PL</a>)
+
+    Here is an example with the above prompt symbols:
+        ```
+        "fontFace" : "Cascadia Code PL",
+        "colorScheme" : "Wryan"
+        ```
+        
+
+    ![Prompt-Example](Screenshot_prompt.png)
 
 -------------------------
 ## Tab icons
