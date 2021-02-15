@@ -123,13 +123,13 @@
     
     > You can get the character codes (e.g. 0xE0A0) from Character Map of the selected font (Here we used <a href="CascadiaCodePL.ttf">Cascadia Code PL</a>)
 
-    Here is an example with the above prompt symbols:
+    Here is an example with the above prompt symbols and the following settings:
         ```
         "fontFace" : "Cascadia Code PL",
         "colorScheme" : "Wryan"
         ```
+        ```Set-Theme Paradox```
         
-
     ![Prompt-Example](Screenshot_prompt.png)
 
 -------------------------
@@ -166,6 +166,11 @@
     ```
     "commandline": "powershell.exe /nologo -NoExit -Command \"& 'C:\\Python\\miniconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Python\\miniconda3' \"",
     ```
-
+    Here is an example with the following settings:
+        ```
+        "fontFace" : "Cascadia Code PL",
+        "colorScheme" : "Horizon"
+        ```
+        ```Set-Theme Honukai```
     ![PowerShell](Screenshot_conda.png)
     > Note that not all the oh-my-posh themes support this! change themes and see which ones show the env name.
