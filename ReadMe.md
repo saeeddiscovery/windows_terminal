@@ -127,7 +127,7 @@
         ```
         "fontFace" : "Cascadia Code PL",
         "colorScheme" : "Wryan"
-        ```
+        ``` and
         ```Set-Theme Paradox```
         
     ![Prompt-Example](Screenshot_prompt.png)
@@ -170,7 +170,7 @@
         ```
         "fontFace" : "Cascadia Code PL",
         "colorScheme" : "Horizon"
-        ```
+        ``` and
         ```Set-Theme Honukai```
     ![PowerShell](Screenshot_conda.png)
     > Note that not all the oh-my-posh themes support this! change themes and see which ones show the env name.
