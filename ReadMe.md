@@ -83,6 +83,10 @@
     > Install-Module posh-git -Scope CurrentUser
     > Install-Module oh-my-posh -Scope CurrentUser
     ```
+    In case you're running this on PS Core, make sure to also install version 2.0.0-beta1 of PSReadLine
+    ```
+    Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+    ```
 
     > For "Windows PowerShell", you should run as admin & change ExecutionPolicy for further steps:
         ``` > Set-ExecutionPolicy RemoteSigned ```
@@ -100,7 +104,7 @@
     ```
     Import-Module posh-git
     Import-Module oh-my-posh
-    Set-Theme Honukai
+    Set-PoshPrompt -Theme Paradox
     ```
 
 6. Restart the shell
