@@ -75,8 +75,11 @@
 ![Kali-Linux](Screenshot_kali.png)
 
 
-1. Add <a href="CascadiaCodePL.ttf">Cascadia Code PL</a> font to Terminal profiles in "settings.json":
-"fontFace": "Cascadia Code PL"
+1. Oh My Posh was designed to use Nerd Fonts. Nerd Fonts are popular fonts that are patched to include icons. We recommend [Meslo LGM NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip) , but any Nerd Font should be compatible with the standard themes.
+    - Terminal-Icons is a PowerShell module that adds file and folder icons when displaying items in the terminal. This relies on the custom fonts provided by Nerd Fonts.
+    ```
+    PS> Install-Module -Name Terminal-Icons -Repository PSGallery
+    ```
 
 2. Install posh and oh-my-posh from Powershell (should be done in both "PowerShell" & "Windows PowerShell"):
     ```
@@ -104,9 +107,13 @@
     ```
     Import-Module posh-git
     Import-Module oh-my-posh
+    Import-Module -Name Terminal-Icons
     Set-PoshPrompt -Theme Paradox
     ```
-
+    You can preview all prompt themes by:
+        ```
+        Get-PoshThemes
+        ```
 6. Restart the shell
 
 > Change Set-Theme parameter to your desired theme's name
