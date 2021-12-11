@@ -78,7 +78,7 @@
 1. Oh My Posh was designed to use Nerd Fonts. Nerd Fonts are popular fonts that are patched to include icons. We recommend [Meslo LGM NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip) , but any Nerd Font should be compatible with the standard themes.
     - Terminal-Icons is a PowerShell module that adds file and folder icons when displaying items in the terminal. This relies on the custom fonts provided by Nerd Fonts.
     ```
-    PS> Install-Module -Name Terminal-Icons -Repository PSGallery
+    > Install-Module -Name Terminal-Icons -Repository PSGallery
     ```
 
 2. Install posh and oh-my-posh from Powershell (should be done in both "PowerShell" & "Windows PowerShell"):
@@ -122,20 +122,7 @@
 
 -----
 
-- **Change Prompt Symbols**
-
-    - You can get Theme parameters by "$ThemeSettings" command.
-    - Prompt symbols can be viewed/changed in "PromptSymbols" and "GitSymbols"  
-    - Examples:
-        ```
-        $ThemeSettings.GitSymbols.BranchSymbol = [char]::ConvertFromUtf32(0xE0A0)
-        $ThemeSettings.PromptSymbols.VirtualEnvSymbol = [char]::ConvertFromUtf32(0x039E)
-        ```
-
-    > - You can get the character codes (e.g. 0xE0A0) from Character Map of the selected font (Here we used <a href="CascadiaCodePL.ttf">Cascadia Code PL</a>)
-    > - You should put these lines in the $PROFILE to make it permanent
-
-    Here is an example with the above prompt symbols and the following settings:
+    Here is an example with the following settings:
         ```
         "fontFace" : "Cascadia Code PL",
         "colorScheme" : "Wryan"
