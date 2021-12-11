@@ -120,16 +120,16 @@
     - Some of theme names are listed in: https://github.com/JanDeDobbeleer/oh-my-posh#themes
     - You can get all theme names by this command: ```Set-Theme x```
 
------
+-------------------------
 
-    Here is an example with the following settings:
-        ```
-        "fontFace" : "Cascadia Code PL",
-        "colorScheme" : "Wryan"
-        ``` and
-        ```Set-Theme Paradox```
-        
-    ![Prompt-Example](Screenshot_prompt.png)
+Here is an example with the following settings:
+    ```
+    "fontFace" : "Cascadia Code PL",
+    "colorScheme" : "Wryan"
+    ``` and
+    ```Set-Theme Paradox```
+
+![Prompt-Example](Screenshot_prompt.png)
 
 -------------------------
 ## Tab icons
